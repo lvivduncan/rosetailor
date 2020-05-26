@@ -3,10 +3,142 @@ shop-product.html
 ////////////// */
 
 /* справа фото, зліва опис */
-#shop-product{
+#shop-product {
   display: grid;
-  grid-template-columns: repeat(3, 1fr) 2fr;
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  grid-gap: 20px;
   width: 1200px;
   margin: auto;
+}
+
+@media(max-width: 1240px){
+  #shop-product{
+    width: 95%;
+  }
+}
+
+@media(max-width: 776px){
+  #shop-product{
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+/* 7 фото, 1 має бути велике */
+#shop-product > a{
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+  background-position: center center!important;
+}
+
+#shop-product a:nth-of-type(1) {
+  grid-area: 1 / 1 / 4 / 3;
+  height: 540px;
+}
+
+@media(max-width: 991px){
+  #shop-product a:nth-of-type(1){
+    grid-area: 1 / 1 / 3 / 4;
+    height: 420px;
+  }
+}
+
+@media(max-width: 776px){
+  #shop-product a:nth-of-type(1){
+    /* grid-area: 1 / 1 / 3 / 4; */
+  }
+}
+
+#shop-product a:nth-of-type(2) {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+@media(max-width: 991px){
+  #shop-product a:nth-of-type(2){
+    grid-area: 3 / 1 / 4 / 2;
+  }
+}
+
+@media(max-width: 776px){
+  #shop-product a:nth-of-type(2){
+    /* grid-area: 3 / 1 / 4 / 2; */
+  }
+}
+
+#shop-product a:nth-of-type(3) {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+@media(max-width: 991px){
+  #shop-product a:nth-of-type(3){
+    grid-area: 3 / 2 / 4 / 3;
+  }
+}
+
+@media(max-width: 776px){
+  #shop-product a:nth-of-type(3){
+    /* grid-area: 3 / 2 / 4 / 3; */
+  }
+}
+
+#shop-product a:nth-of-type(4) {
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+@media(max-width: 991px){
+  #shop-product a:nth-of-type(4){
+    grid-area: 3 / 3 / 4 / 4;
+  }
+}
+
+@media(max-width: 776px){
+  #shop-product a:nth-of-type(4){
+    grid-area: 3 / 3 / 4 / 4;
+  }
+}
+
+#shop-product a:nth-of-type(5) {
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+@media(max-width: 776px){
+  #shop-product a:nth-of-type(5){
+    grid-area: 3 / 4 / 4 / 5;
+  }
+}
+
+#shop-product a:nth-of-type(6) {
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+@media(max-width: 776px){
+  #shop-product a:nth-of-type(6){
+    grid-area: 3 / 5 / 4 / 6;
+  }
+}
+
+#shop-product a:nth-of-type(7) {
+  grid-area: 4 / 3 / 5 / 4;
+}
+
+@media(max-width: 776px){
+  #shop-product a:nth-of-type(7){
+    grid-area: 3 / 6 / 4 / 7;
+  }
+}
+
+/* блок з текстовим контентом справа */
+#shop-product article {
+  grid-area: 1 / 4 / 5 / 6;
+  align-self: center;
+}
+
+@media(max-width: 776px){
+  #shop-product article {
+    grid-area: 1 / 4 / 3 / 7;
+  }
 }
