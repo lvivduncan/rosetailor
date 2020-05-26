@@ -1,0 +1,12 @@
+/* //////////////
+shop-product.html
+////////////// */
+
+/* справа фото, зліва опис */
+#shop-product{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 2fr;
+  grid-template-rows: repeat(4, 1fr);
+  width: 1200px;
+  margin: auto;
+}
