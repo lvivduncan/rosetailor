@@ -2,7 +2,7 @@
 
 .shop-title {
   width: 1200px;
-  margin: 30px auto;
+  margin: 40px auto 20px;
   text-align: center;
 }
 
@@ -99,16 +99,15 @@ shop-product.html
   background-size: cover !important;
   background-position: center center !important;
   position: relative;
-
   -webkit-transition: opacity .5s, transform .5s;
   transition: opacity .5s, transform .5s
-    /* overflow: hidden; */
 }
 
 #shop-product>a:hover,
 #shop-product>a:focus {
   opacity: .9;
-  transform: scale(1.05);
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 #shop-product>a::after {
@@ -345,8 +344,30 @@ shop.html
 .pattern-2 :nth-child(2),
 .pattern-2 :nth-child(3),
 .pattern-2 :nth-child(4) {
-  min-height: 420px;
-  background: yellow;
+  min-height: 360px;
+  background-size: cover !important;
+  background-position: center center !important;
+  padding: 20px;
+  font-size: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-transition: transform .5s;
+  transition: transform .5s;
+}
+
+.pattern-1 :nth-child(1):hover,
+.pattern-1 :nth-child(2):hover,
+.pattern-1 :nth-child(3):hover,
+.pattern-1 :nth-child(4):hover,
+.pattern-2 :nth-child(1):hover,
+.pattern-2 :nth-child(2):hover,
+.pattern-2 :nth-child(3):hover,
+.pattern-2 :nth-child(4):hover {
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 @media(max-width: 991px) {
@@ -359,7 +380,7 @@ shop.html
   .pattern-2 :nth-child(2),
   .pattern-2 :nth-child(3),
   .pattern-2 :nth-child(4) {
-    min-height: 360px;
+    min-height: 300px;
   }
 }
 
@@ -373,7 +394,7 @@ shop.html
   .pattern-2 :nth-child(2),
   .pattern-2 :nth-child(3),
   .pattern-2 :nth-child(4) {
-    min-height: 280px;
+    min-height: 220px;
   }
 }
 
@@ -395,4 +416,42 @@ shop.html
 .pattern-1 :nth-of-type(4),
 .pattern-2 :nth-of-type(4) {
   grid-area: el-4;
+}
+
+/* паттерн - перелік усіх категорій */
+.pattern-3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  width: 1200px;
+  margin: auto;
+}
+
+@media(max-width: 1240px) {
+  .pattern-3 {
+    width: 100%;
+  }
+}
+
+.pattern-3 ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.pattern-3 li {
+  display: block;
+  margin: 0 0 20px;
+}
+
+.pattern-3 li a {
+  color: var(--dark);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.pattern-3 li a strong {
+  color: var(--gold) !important;
 }
