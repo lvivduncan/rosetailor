@@ -1,0 +1,21 @@
+:root{
+  --gold: rgb(242, 157, 0);
+  --red: rgb(196, 4, 25);
+  --green: rgb(8, 116, 46);
+  --dark: rgb(34, 34, 34);
+  --ivory: rgb(255, 255, 240);
+  --cyan: rgb(28, 30, 87);
+}
+
+html{ 
+  font-size: 16px;
+}
+
+body{ 
+  font-family: 'Open Sans', sans-serif;
+  background: var(--dark)
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Comfortaa', cursive;
+}
